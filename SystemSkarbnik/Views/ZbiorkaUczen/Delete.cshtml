@@ -1,0 +1,51 @@
+﻿@model SystemSkarbnik.Models.ZbiorkaUczen
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ZbiorkaUczen</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zbiorka)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zbiorka.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Klasa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Klasa.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Uczen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Uczen.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CzyZaplacil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CzyZaplacil)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KiedyZaplacil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KiedyZaplacil)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
